@@ -26,24 +26,24 @@ public class secondTaskNew {
         }
 
         public static void main(String[] args) throws IOException {
-            // Scanner in = new Scanner(new File("D:/JavaV01/Java/Sem230123/input.txt"));
-            // PrintWriter out = new PrintWriter(new File("D:/JavaV01/Java/Sem230123/output.txt"));
-            // int a, b, c;
-            // a= in.nextInt();
-            // b = in.nextInt();
+            Scanner in = new Scanner(new File("D:/JavaV01/Java/Sem230123/input.txt"));
+            PrintWriter out = new PrintWriter(new File("D:/JavaV01/Java/Sem230123/output.txt"));
+            int a, b;
+            a= in.nextInt();
+            b = in.nextInt();
             
-            // // c = degree(a, b);
-
-            // out.println(Integer.toString(c));
-            // out.close();
-            // in.close();
-            Scanner in = new Scanner(System.in);
-            System.out.println("Введите исходное число:");
-            int a = in.nextInt();
-            // int a = 5;
-            System.out.println("Введите степень в которую хотите возвести число:");
-            int b = in.nextInt();
-            // int b = 5;
+            double z = degree(a, b);
+            String str = Double.toString(z);
+            out.println(str);
+            out.close();
+            in.close();
+            // Scanner in = new Scanner(System.in);
+            // System.out.println("Введите исходное число:");
+            // int a = in.nextInt();
+            // // int a = 5;
+            // System.out.println("Введите степень в которую хотите возвести число:");
+            // int b = in.nextInt();
+            // // int b = 5;
 
             System.out.println("Число " + a + " в степени " + b + " будет равно: " + degree(a, b));
         }
