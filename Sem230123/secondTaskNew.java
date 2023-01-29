@@ -7,6 +7,7 @@ public class secondTaskNew {
     public class main {
 
         public static double degree(int a, int b) {
+            
             double c = 1;
 
             if (b > 0) {
@@ -25,25 +26,26 @@ public class secondTaskNew {
         }
 
         public static void main(String[] args) throws IOException {
-            Scanner in = new Scanner(new File("input.txt"));
-            PrintWriter out = new PrintWriter(new File("output.txt"));
-            int a, b, c;
-            a= in.nextInt();
-            b = in.nextInt();
-            c = degree(a, b);
+            // Scanner in = new Scanner(new File("D:/JavaV01/Java/Sem230123/input.txt"));
+            // PrintWriter out = new PrintWriter(new File("D:/JavaV01/Java/Sem230123/output.txt"));
+            // int a, b, c;
+            // a= in.nextInt();
+            // b = in.nextInt();
             
-            out.println(Integer.toString(c));
-            out.close();
-            in.close();
-            // Scanner in = new Scanner(System.in);
-            // System.out.println("Введите исходное число:");
-            // int a = in.nextInt();
-            // // int a = 5;
-            // System.out.println("Введите степень в которую хотите возвести число:");
-            // int b = in.nextInt();
-            // // int b = 5;
+            // // c = degree(a, b);
 
-            // System.out.println("Число " + a + " в степени " + b + " будет равно: " + degree(a, b));
+            // out.println(Integer.toString(c));
+            // out.close();
+            // in.close();
+            Scanner in = new Scanner(System.in);
+            System.out.println("Введите исходное число:");
+            int a = in.nextInt();
+            // int a = 5;
+            System.out.println("Введите степень в которую хотите возвести число:");
+            int b = in.nextInt();
+            // int b = 5;
+
+            System.out.println("Число " + a + " в степени " + b + " будет равно: " + degree(a, b));
         }
     }
 }
