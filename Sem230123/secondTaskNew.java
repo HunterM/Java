@@ -1,4 +1,6 @@
 import java.util.Scanner;
+import java.io.*;
+import java.util.Random;
 
 public class secondTaskNew {
 
@@ -22,16 +24,26 @@ public class secondTaskNew {
             return c;
         }
 
-        public static void main(String[] args) {
-            Scanner in = new Scanner(System.in);
-            System.out.println("Введите исходное число:");
-            int a = in.nextInt();
-            // int a = 5;
-            System.out.println("Введите степень в которую хотите возвести число:");
-            int b = in.nextInt();
-            // int b = 5;
+        public static void main(String[] args) throws IOException {
+            Scanner in = new Scanner(new File("input.txt"));
+            PrintWriter out = new PrintWriter(new File("output.txt"));
+            int a, b, c;
+            a= in.nextInt();
+            b = in.nextInt();
+            c = degree(a, b);
+            
+            out.println(Integer.toString(c));
+            out.close();
+            in.close();
+            // Scanner in = new Scanner(System.in);
+            // System.out.println("Введите исходное число:");
+            // int a = in.nextInt();
+            // // int a = 5;
+            // System.out.println("Введите степень в которую хотите возвести число:");
+            // int b = in.nextInt();
+            // // int b = 5;
 
-            System.out.println("Число " + a + " в степени " + b + " будет равно: " + degree(a, b));
+            // System.out.println("Число " + a + " в степени " + b + " будет равно: " + degree(a, b));
         }
     }
 }
