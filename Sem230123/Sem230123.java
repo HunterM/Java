@@ -26,7 +26,7 @@ public class Sem230123 {
         System.out.println("Введите размер первой последовательности:");
         int j = in.nextInt();
         int arr1[] = new int[j];
-        System.out.println("Введите первую числовую последовательность:");
+        System.out.println("Введите через пробел первую числовую последовательность:");
         for (int i = 0; i < j; i++) {
             arr1[i] = in.nextInt();
         }
@@ -34,7 +34,7 @@ public class Sem230123 {
         System.out.println("Введите размер второй последовательности:");
         int k = in.nextInt();
         int arr2[] = new int[j];
-        System.out.println("Введите вторую числовую последовательность:");
+        System.out.println("Введите через пробел вторую числовую последовательность:");
         for (int i = 0; i < k; i++) {
             arr2[i] = in.nextInt();
         }
@@ -54,7 +54,7 @@ public class Sem230123 {
                     arr3[i] = arr2[l];
                     arr2 = remove(arr2, l);
 
-                    String str = arr3[i].toString(arr3);
+                    // String str = Arrays.toString(arr3);
                     // int[] numArr = Arrays.stream(arr3[i], int, l).mapToInt(Integer::parseInt).toArray();
                     System.out.print(arr3[i] + " ");
 
