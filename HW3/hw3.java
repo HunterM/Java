@@ -52,18 +52,14 @@ public class hw3 {
         return success;
     }
 
-    /**
-     * FOLLOW UP 2
-     * What if multiple paths are available?
-     * Find all paths.
-     */
+   
     public static ArrayList<ArrayList<Point>> findAllPaths(int[][] map) {
         ArrayList<ArrayList<Point>> result = new ArrayList<ArrayList<Point>>();
         findAllPaths(map.length - 1, map[0].length - 1, map, new ArrayList<Point>(), result);
         return result;
     }
 
-    // pass in an ArrayList as buffer
+    // передача в массив
     @SuppressWarnings("unchecked")
     private static void findAllPaths(int x, int y, int[][] map,
             ArrayList<Point> path, ArrayList<ArrayList<Point>> result) {
@@ -86,7 +82,7 @@ public class hw3 {
         return result;
     }
 
-    // pass in an Array as buffer
+    // передача массива в буфер
     private static void findAllPaths2(int x, int y, int[][] map,
             Point[] path, int index, ArrayList<ArrayList<Point>> result) {
         if (x < 0 || y < 0) return;
@@ -120,12 +116,12 @@ public class hw3 {
         }
     }
 
-    //TEST----------------------------------
+    //тест
     public static void main(String[] args) {
-        int[][] map = {{1,1,1,1,1,1},
-                       {1,1,1,1,1,1},
-                       {1,1,1,1,1,1},
-                       {1,1,1,1,1,1}};
+        int[][] map = {{1,1,1,1},
+                       {1,0,1,1},
+                       {1,1,0,1},
+                       {1,1,1,1}};
         println((findPath(map)));
         println(findPathDP(map));
         println(findAllPaths(map));
