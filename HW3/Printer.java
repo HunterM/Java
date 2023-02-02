@@ -1,5 +1,7 @@
 package HW3;
 
+// package Printer;
+
 public class Printer {
     public static void print(Object o) {
         System.out.print(o);

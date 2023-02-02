@@ -60,7 +60,7 @@ public class hw3 {
     }
 
     // передача в массив
-    @SuppressWarnings("unchecked")
+    @SuppressWarnings("Не проверенный")
     private static void findAllPaths(int x, int y, int[][] map,
             ArrayList<Point> path, ArrayList<ArrayList<Point>> result) {
         if (x < 0 || y < 0) return;
